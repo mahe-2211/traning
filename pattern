@@ -1,0 +1,62 @@
+Write a program to execute the Pattern
+
+Input Format
+
+Input consist of single integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the pattern
+
+Sample Input 0
+
+3
+Sample Output 0
+
+  1
+ 1A1
+1ABC1
+Sample Input 1
+
+5
+Sample Output 1
+
+    1
+   1A1
+  1ABC1
+ 1ABCDE1
+1ABCDEFG1
+
+output
+import java.util.*;
+
+public class Solution {
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    for(int i=1;i<=a;i++)
+    {
+        int num=65;
+        for(int j=1;j<=a-i;j++)
+        {
+            System.out.print(" ");
+        }
+        for(int k=1;k<=2*i-1;k++)
+        {
+            if(k==1||k==2*i-1)
+            {
+                System.out.print("1");
+            }
+            else{
+                System.out.print((char)num++);
+            }
+            }
+        System.out.println();
+        }
+    }
+
+    }
